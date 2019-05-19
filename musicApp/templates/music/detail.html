@@ -1,0 +1,25 @@
+{% extends 'music/base.html' %}
+{% block title %} Album Details {% endblock %}
+{% block songs_active %} active {% endblock %}
+
+{% block body %}
+
+	{% include 'music/card.html' %}	
+	{{ album.id }}
+	{{ album.title }}
+	{% for song in album.song_set.all %}
+		{{ album.id }}
+		{{ album.title }}
+		{{ song.song_title }}
+		<br />
+	{% endfor %}
+
+
+{% endblock %}
+
+
+
+
+
+
+
